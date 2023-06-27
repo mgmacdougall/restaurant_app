@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    font-family: 'Smythe', cursive;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    /* text-align: center; */
+    font-size: ;
+}
+
+h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+txt-center {
+    text-align: center;
+}
+
+.hero {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.lg-txt {
+    font-size: 39px;
+}
+
+.hero img {
+    width: 600px;
+    height: 140px;
+    position: relative;
+}
+
+#one {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+
+.txt-overlay-center {
+    position: absolute;
+    top: 20px;
+    padding: 10px;
+    color: white;
+}
+
+.img-med {
+    font-size: 70px;
+}
+
+.container {
+    display: flex;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+}
+
+.menuItem {
+    display: flex;
+    /* align-self: left; */
+    width: 500px;
+    height: 140px;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menuItem div:nth-of-type(1) {
+    padding-right: 40px;
+    align-self: center;
+}
+
+.menuItem div:nth-last-of-type(2) {
+    flex-grow: 1;
+    text-align: left;
+    justify-content: space-evenly;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.background-gray {
+    color: #DEDEDE;
+}
+
+.button-group {
+    align-self: center;
+}
+
+
+.item-price {
+    font-size: 20px;
+}
+
+.item-name {
+    color: #8B8B8B;
+}
+
+.round-button {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    color: #3C3C3C;
+    font-weight: lighter;
+    font-size: 32px;
+}
+
+.txt-xtra-light {
+    font-weight: lighter;
+    size: 32;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+}
+
+.order-details {
+    display: inline-flex;
+    font-size: 24px;
+}
+
+.order-price{
+    font-size:20px;
+}
+.remove {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+
+.order-details-text {
+    margin-right: 10px;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+.pad-t-med {
+    margin-top: 10px;
+}
+
+.btn-green {
+    background-color: #16DB99;
+    color: white;
+}
+
+#order-container>h3 {
+    text-align: center;
+}
+
+.btn-flat {
+    border: none;
+    height: 20px;
+    color: #BBBBBB;
+    background-color: white;
+    align-self: center;
+}
+.hidden{
+    visibility: hidden;
+}
+.visible{
+    visibility:visible;
+}
