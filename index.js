@@ -98,8 +98,8 @@ function renderOrderItem() {
 
 function getOrderTotal() {
   let total = 0;
-  for(let orderedItem of orderTotal){
-    console.log(orderedItem.price)
+  for (let orderedItem of orderTotal) {
+    console.log(orderedItem.price);
     total += orderedItem.price;
   }
   return total;
@@ -108,13 +108,19 @@ function getOrderTotal() {
 function renderOrderTotal() {
   const orderTotalEl = document.getElementById("orderTotal");
   const totalEl = document.getElementById("total-container");
-  if (totalEl == null) {
+  if (orderTotal.length === 0) {
+    console.log("remove the total section");
+    orderTotalEl.innerHTML = "";
+  }
+  if (totalEl == null && orderTotal.length > 0) {
     let totalSection = `
     <div id="total-container" class="order-item">
     <p>Total</p><p id="running-total">${getOrderTotal()}</p>
     </div>
     `;
     orderTotalEl.innerHTML += totalSection;
+  } else if (totalEl && orderTotal.length === 0) {
+    hideOrderPanel();
   } else {
     document.getElementById("running-total").innerHTML = getOrderTotal();
   }
@@ -126,7 +132,7 @@ function addToOrderTotal(itemOrdered) {
 }
 
 function removeFromOrderTotal(itemUUID) {
-   for (let index = 0; index < orderTotal.length; index++) {
+  for (let index = 0; index < orderTotal.length; index++) {
     const element = orderTotal[index];
     console.log(element.uuid);
     if (element.uuid === itemUUID) {
@@ -162,9 +168,15 @@ function handleRemoveItemClick(uuid) {
 // Handler for the Total  portion
 
 orderContainerEl.addEventListener("click", function(e) {
-  handleRemoveItemClick(e.target.id);
-  if (userOrder.length === 0) {
-    hideOrderPanel();
+  console.log(e.target.id);
+  if (e.target.id === "orderButton") {
+    console.log('Show order form');
+  }
+  if (e.target.id != "orderButton") {
+    handleRemoveItemClick(e.target.id);
+    if (userOrder.length === 0) {
+      hideOrderPanel();
+    }
   }
 });
 
@@ -180,6 +192,10 @@ menuItemEl.addEventListener("click", function(e) {
     console.log("invalid item");
   }
   console.log(getOrderTotal());
+});
+
+document.getElementById("orderButton").addEventListener("click", function() {
+  console.log("Display order form");
 });
 
 function render() {
