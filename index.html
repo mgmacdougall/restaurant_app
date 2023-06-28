@@ -14,6 +14,24 @@
             </div>
         </header>
         <div class="container" id="menuItems"></div>
+        <div class="parent display-none">
+            <div class="modal-dialog display-none" id="order-dialog">
+                <h3 style="text-align: center; margin-top:20px;">Enter Card Details</h3>
+                <div class="dialog-contents">
+                    <form id="myForm">
+                        <input type="text" name="email" id="email" class="default-input" placeholder="Enter your name"
+                            required>
+                        <input type="text" name="credit-card" id="credit-card" class="default-input"
+                            placeholder="Enter credit card" required>
+                        <input type="text" name="credit-card-cvv" id="credit-card-cvv" class="default-input"
+                            placeholder="Enter CVV" required>
+                        <div class="modal-button-container">
+                            <input type="submit" value="Pay" id="payOrder" class="btn-green fullwidth">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div id="order-container" class="hidden">
             <h3>Your Order</h3>
             <div id="order"></div>
@@ -22,6 +40,7 @@
                 <button class="fullwidth btn-green" id="orderButton">Order</button>
             </div>
         </div>
+        <div id="message" class="hidden"></div>
         <script src="index.js" type="module" defer></script>
     </body>
 </html>

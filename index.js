@@ -167,10 +167,17 @@ function handleRemoveItemClick(uuid) {
 // Seperate Handlers to avoid bubbling into two handlers.
 // Handler for the Total  portion
 
+function renderOrderForm() {
+  let t = document.querySelector(".parent");
+  t.classList.remove("display-none");
+  t.classList.toggle("visible");
+}
+
 orderContainerEl.addEventListener("click", function(e) {
   console.log(e.target.id);
   if (e.target.id === "orderButton") {
-    console.log('Show order form');
+    console.log("Show order form");
+    renderOrderForm();
   }
   if (e.target.id != "orderButton") {
     handleRemoveItemClick(e.target.id);
@@ -196,6 +203,29 @@ menuItemEl.addEventListener("click", function(e) {
 
 document.getElementById("orderButton").addEventListener("click", function() {
   console.log("Display order form");
+});
+
+function renderOrderMessage(name) {
+  // build the
+  let message = `<div class="msg-center">
+  <span>Thanks ${name}! Your order is on the way!</span>
+</div>`;
+
+  let messageEl = document.getElementById("message");
+  let orderElm = document.getElementById("order-container");
+  let modal = document.querySelector(".parent");
+
+  orderElm.classList.toggle("display-none");
+  modal.classList.toggle('display-none')
+  messageEl.innerHTML = message;
+  messageEl.classList.toggle("visible");
+}
+
+// Form control
+document.getElementById("myForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  console.log(e.target.elements);
+  renderOrderMessage('Mike')
 });
 
 function render() {

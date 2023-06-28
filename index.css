@@ -4,6 +4,7 @@ body {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 h1 {
@@ -132,14 +133,14 @@ txt-center {
     font-size: 24px;
 }
 
-.order-price{
-    font-size:20px;
+.order-price {
+    font-size: 20px;
 }
+
 .remove {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
 }
-
 
 .order-details-text {
     margin-right: 10px;
@@ -149,11 +150,17 @@ txt-center {
     width: 100%;
 }
 
+.modal-button-container {
+    margin: auto;
+    max-width: 480px;
+    width: 100%;
+}
+
 .pad-t-med {
     margin-top: 10px;
 }
 
-.btn-container{
+.btn-container {
     max-width: 510px;
     margin: 0 auto;
 }
@@ -163,8 +170,8 @@ txt-center {
     color: white;
     border: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top:10px;
-    padding:20px 0;
+    margin-top: 10px;
+    padding: 20px 0;
 }
 
 #order-container>h3 {
@@ -179,10 +186,69 @@ txt-center {
     align-self: center;
 }
 
-.hidden{
+.hidden {
     visibility: hidden;
 }
 
-.visible{
-    visibility:visible;
+
+.visible {
+    visibility: visible;
+}
+
+.display-none {
+    display: none;
+}
+
+.parent {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 600px;
+    height: 700px;
+    position: absolute;
+    top: 15%;
+}
+
+.modal-dialog {
+    display: block;
+    position: relative;
+    max-width: 525px;
+    height: 450px;
+    z-index: 1;
+    border: 1px solid red;
+    top: 0;
+    margin: auto;
+    background-color: #FFFFFF;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    padding-top: 20px;
+    color: #000000;
+    text-align: center;
+}
+
+.default-input {
+    width: 475px;
+    height: 70px;
+    border-color: #757575;
+    color: #757575
+}
+
+.msg-center {
+    font-family: 'Smythe', cursive;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    text-align: center;
+    width: 500px;
+    height: 120px;
+    color: #065F46;
+    background-color: #ECFDF5;
+    margin-left:auto;
+    margin-right: auto;
 }
