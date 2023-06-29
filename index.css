@@ -7,19 +7,12 @@ body {
     position: relative;
 }
 
-h1 {
-    /* text-align: center; */
-    /* font-size: ; */
-}
-
-h3 {
+h3,
+p {
     font-size: 24px;
     margin: 0;
 }
 
-txt-center {
-    text-align: center;
-}
 
 .hero {
     width: 600px;
@@ -126,6 +119,7 @@ txt-center {
     margin-left: auto;
     margin-right: auto;
     max-width: 500px;
+    margin-bottom: 10px;
 }
 
 .order-details {
@@ -135,6 +129,17 @@ txt-center {
 
 .order-price {
     font-size: 20px;
+}
+
+#order {
+    padding-bottom: 10px;
+}
+
+#total-container {
+    border-top: 2px solid #393333;
+    padding-top: 10px;
+
+
 }
 
 .remove {
@@ -201,10 +206,14 @@ txt-center {
 
 .parent {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 600px;
-    height: 700px;
+    /* width: 600px;
+    height: 700px; */
     position: absolute;
     top: 15%;
+    box-shadow: 2px 3px 8px black;
+    background-color: white;
+    margin-left: 30px;
+    padding: 20px;
 }
 
 .modal-dialog {
@@ -213,7 +222,6 @@ txt-center {
     max-width: 525px;
     height: 450px;
     z-index: 1;
-    border: 1px solid red;
     top: 0;
     margin: auto;
     background-color: #FFFFFF;
@@ -249,6 +257,6 @@ form {
     height: 120px;
     color: #065F46;
     background-color: #ECFDF5;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
 }

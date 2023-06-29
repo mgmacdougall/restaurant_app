@@ -115,7 +115,7 @@ function renderOrderTotal() {
   if (totalEl == null && orderTotal.length > 0) {
     let totalSection = `
     <div id="total-container" class="order-item">
-    <p>Total</p><p id="running-total">${getOrderTotal()}</p>
+      <p>Total</p><p id="running-total">$ ${getOrderTotal()}</p>
     </div>
     `;
     orderTotalEl.innerHTML += totalSection;
@@ -149,7 +149,7 @@ function addItem(menuItem) {
   renderOrderTotal();
   const orderElm = document.getElementById("order-container");
   if (orderElm.classList.contains("hidden")) {
-    orderElm.classList.toggle("visible");
+    orderElm.classList.remove("visible");
   }
 }
 
@@ -170,7 +170,7 @@ function handleRemoveItemClick(uuid) {
 function renderOrderForm() {
   let t = document.querySelector(".parent");
   t.classList.remove("display-none");
-  t.classList.toggle("visible");
+  t.classList.add("visible");
 }
 
 orderContainerEl.addEventListener("click", function(e) {
@@ -215,10 +215,12 @@ function renderOrderMessage(name) {
   let orderElm = document.getElementById("order-container");
   let modal = document.querySelector(".parent");
 
-  orderElm.classList.toggle("display-none");
-  modal.classList.toggle('display-none')
+  orderElm.classList.remove('hidden');
+  orderElm.classList.add('display-none')
+  modal.classList.add('display-none');
   messageEl.innerHTML = message;
-  messageEl.classList.toggle("visible");
+  messageEl.classList.remove('hidden')
+  messageEl.classList.add('visible')
 }
 
 // Form control
