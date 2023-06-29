@@ -226,8 +226,8 @@ function renderOrderMessage(name) {
 // Form control
 document.getElementById("myForm").addEventListener("submit", function(e) {
   e.preventDefault();
-  console.log(e.target.elements);
-  renderOrderMessage('Mike')
+  console.log(e.target.elements[0].value);
+  renderOrderMessage(e.target.elements[0].value);
 });
 
 function render() {
